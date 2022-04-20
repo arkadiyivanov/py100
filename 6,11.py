@@ -11,8 +11,11 @@ while True:
     for num_ in dict(denomination):
         if n >= num_:
             denomination[num_] = denomination[num_] + 1
-        if n == num_:
-            denomination[num_] = denomination[num_] + 1
+            n = n - num_
+            if n // num_:
+                denomination[num_] = denomination[num_] + 1
+                n = n - num_
+
 
 
 
